@@ -32,8 +32,8 @@ public class AutoScrollViewPager extends RelativeLayout {
     private Context mContext;
 
     private LinearLayout layout;
-    private View view;//底部文字和小圆点
-    private TextView mSubTitle;//标题文字
+    private View view;//Bottom text and dots
+    private TextView mSubTitle;//Headline text
 
     public TextView getSubTitle() {
         return mSubTitle;

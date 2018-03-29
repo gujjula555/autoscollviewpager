@@ -45,7 +45,7 @@ public class AutoViewPager extends ViewPager {
         if (((BaseViewPagerAdapter)getAdapter()).getRealCount() == 0) {
             return;
         }
-        //先停止
+        //Stop first
         onStop();
         doStart();
 
@@ -74,7 +74,7 @@ public class AutoViewPager extends ViewPager {
             currentItem++ ;
         }
         setCurrentItem(currentItem);
-        //更新小圆点状态
+        //Update dot status
         int nextItem = (currentItem % ((BaseViewPagerAdapter)getAdapter()).getRealCount());
         onPageSelected(nextItem);
     }
@@ -107,7 +107,7 @@ public class AutoViewPager extends ViewPager {
 
     public void onStop(){
         isStart = false;
-        //先取消定时器
+        //Cancel timer first
         if (mTimer != null) {
             mTimer.cancel();
             mTimer = null;
@@ -136,7 +136,7 @@ public class AutoViewPager extends ViewPager {
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         switch (ev.getAction()){
             case MotionEvent.ACTION_DOWN:
-                //onTouchEvent中无法拦截到ACTION_DOWN的动作
+                //Cannot intercept ACTION_DOWN action in onTouchEvent
                 onStop();
                 break;
         }

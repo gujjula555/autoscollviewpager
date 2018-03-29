@@ -3,6 +3,7 @@
           package="com.kcode.autoviewpager">
 
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
     <application
         android:name=".App"
         android:allowBackup="true"

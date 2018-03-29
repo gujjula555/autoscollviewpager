@@ -63,7 +63,7 @@ public abstract class BaseViewPagerAdapter<T> extends PagerAdapter implements Vi
         if (data == null || data.size() == 0){
             return;
         }
-        //设置初始为中间，这样一开始就能够往左滑动了
+        //Set the initial middle, so that you can slide to the left
         int position = Integer.MAX_VALUE/2 - (Integer.MAX_VALUE/2) % getRealCount();
         mView.setCurrentItem(position);
 
@@ -81,7 +81,7 @@ public abstract class BaseViewPagerAdapter<T> extends PagerAdapter implements Vi
     public void add(T t){
 
         if (mView.getAdapter() == null) {
-            throw new RuntimeException("必须先设置Adapter");
+            throw new RuntimeException("Must set Adapter first");
         }
 
         if (data == null) {
@@ -89,12 +89,12 @@ public abstract class BaseViewPagerAdapter<T> extends PagerAdapter implements Vi
         }
         int currentItem = mView.getCurrentItem() % getRealCount();
         data.add(t);
-        //先停止自动滚动
+        //Stop auto-scroll first
         mView.onStop();
-        Log.d(TAG, "当前显示第" + currentItem + "/" + mView.getCurrentItem());
+        Log.d(TAG, "Current display" + currentItem + "/" + mView.getCurrentItem());
 //        notifyDataSetChanged();
         mView.updatePointView(getRealCount(),currentItem);
-        //重新开始自动滚动
+        //Restart automatic scrolling
         mView.onResume();
 
     }
@@ -154,7 +154,7 @@ public abstract class BaseViewPagerAdapter<T> extends PagerAdapter implements Vi
         loadImage(view,position, data.get(position % getRealCount()));
         container.addView(view);
 
-        //设置标题(不知道为什么标题跟图片对不上，所以做了如下处理，有大神看到帮忙看看。。。)
+        //Set the title (do not know why the title is not on the picture, so do the following processing, there is a big God to see help...)
         if (mView.getSubTitle() != null){
             if (position == 0){
                 setSubTitle(mView.getSubTitle(),position,data.get((getRealCount() - 1)));
@@ -194,7 +194,7 @@ public abstract class BaseViewPagerAdapter<T> extends PagerAdapter implements Vi
 
     @Override
     public void onPageSelected(int position) {
-//        mView.onPageSelected(position % getRealCount());
+        mView.onPageSelected(position % getRealCount());
     }
 
     @Override

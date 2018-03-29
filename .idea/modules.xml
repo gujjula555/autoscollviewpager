@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AutoScrollViewPager.iml" filepath="$PROJECT_DIR$/AutoScrollViewPager.iml" />
       <module fileurl="file://$PROJECT_DIR$/AutoViewPager.iml" filepath="$PROJECT_DIR$/AutoViewPager.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/autoScrollViewPager/autoScrollViewPager.iml" filepath="$PROJECT_DIR$/autoScrollViewPager/autoScrollViewPager.iml" />
       <module fileurl="file://$PROJECT_DIR$/autoScrollViewPager/autoScrollViewPager.iml" filepath="$PROJECT_DIR$/autoScrollViewPager/autoScrollViewPager.iml" />
     </modules>
   </component>

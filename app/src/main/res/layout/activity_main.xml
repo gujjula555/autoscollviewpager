@@ -9,7 +9,7 @@
     android:orientation="vertical"
     tools:context="com.kcode.autoviewpager.MainActivity">
 
-    <!--app:point_layout="center" 指定小圆点位置（center或者right）-->
+    <!--App:point_layout="center" Specifies the dot position (center or right)-->
     <com.kcode.autoscrollviewpager.view.AutoScrollViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
@@ -22,5 +22,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="add"
-        android:text="添加图片"/>
+        android:text="add pictures"/>
 </LinearLayout>
